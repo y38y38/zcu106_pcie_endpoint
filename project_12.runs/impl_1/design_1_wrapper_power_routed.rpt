@@ -1,0 +1,201 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2021.2.1 (lin64) Build 3414424 Sun Dec 19 10:57:14 MST 2021
+| Date             : Mon Jan 10 15:26:32 2022
+| Host             : b running 64-bit Ubuntu 18.04.6 LTS
+| Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+| Design           : design_1_wrapper
+| Device           : xczu7ev-ffvc1156-2-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 5.148        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 4.406        |
+| Device Static (W)        | 0.742        |
+| Effective TJA (C/W)      | 1.0          |
+| Max Ambient (C)          | 95.0         |
+| Junction Temperature (C) | 30.0         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.126 |       19 |       --- |             --- |
+| CLB Logic                |     0.149 |    61439 |       --- |             --- |
+|   LUT as Distributed RAM |     0.081 |     2613 |    101760 |            2.57 |
+|   LUT as Logic           |     0.054 |    19239 |    230400 |            8.35 |
+|   Register               |     0.008 |    29167 |    460800 |            6.33 |
+|   LUT as Shift Register  |     0.006 |      935 |    101760 |            0.92 |
+|   CARRY8                 |    <0.001 |      162 |     28800 |            0.56 |
+|   Others                 |     0.000 |     1057 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |      162 |    230400 |            0.07 |
+| Signals                  |     0.137 |    48125 |       --- |             --- |
+| Block RAM                |     0.193 |       44 |       312 |           14.10 |
+| I/O                      |     0.006 |        1 |       360 |            0.28 |
+| GTH                      |     0.981 |        4 |        20 |           20.00 |
+| PS8                      |     2.659 |        1 |       --- |             --- |
+| Hard IPs                 |     0.157 |        1 |       --- |             --- |
+|   PCIE                   |     0.157 |        1 |       --- |             --- |
+| Static Power             |     0.742 |          |           |                 |
+|   PS Static              |     0.100 |          |           |                 |
+|   PL Static              |     0.642 |          |           |                 |
+| Total                    |     5.148 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint          |       0.850 |     1.203 |       1.041 |      0.162 |       NA    | Unspecified | NA         |
+| Vccint_io       |       0.850 |     0.072 |       0.001 |      0.071 |       NA    | Unspecified | NA         |
+| Vccbram         |       0.850 |     0.031 |       0.029 |      0.002 |       NA    | Unspecified | NA         |
+| Vccaux          |       1.800 |     0.147 |       0.000 |      0.147 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.058 |       0.003 |      0.055 |       NA    | Unspecified | NA         |
+| Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18          |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135         |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP     |       0.850 |     1.054 |       1.017 |      0.036 |       NA    | Unspecified | NA         |
+| VCC_PSINTLP     |       0.850 |     0.249 |       0.242 |      0.007 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVCC    |       0.850 |     0.139 |       0.138 |      0.001 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP_DDR |       0.850 |     0.730 |       0.725 |      0.005 |       NA    | Unspecified | NA         |
+| VCC_PSPLL       |       1.200 |     0.071 |       0.069 |      0.002 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVTT    |       1.800 |     0.034 |       0.033 |      0.001 |       NA    | Unspecified | NA         |
+| VCCO_PSDDR_504  |       1.200 |     0.626 |       0.592 |      0.034 |       NA    | Unspecified | NA         |
+| VCC_PSAUX       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VCC_PSBATT      |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSDDR_PLL   |       1.800 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| VCCO_PSIO0_500  |       1.800 |     0.001 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
+| VCCO_PSIO1_501  |       1.800 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| VCCO_PSIO2_502  |       1.800 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| VCCO_PSIO3_503  |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| VCC_PSADC       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VCCINT_VCU      |       0.900 |     0.028 |       0.000 |      0.028 |       NA    | Unspecified | NA         |
+| MGTAVcc         |       0.900 |     0.273 |       0.261 |      0.012 |       NA    | Unspecified | NA         |
+| MGTAVtt         |       1.200 |     0.503 |       0.480 |      0.023 |       NA    | Unspecified | NA         |
+| MGTVccaux       |       1.800 |     0.012 |       0.012 |      0.000 |       NA    | Unspecified | NA         |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.0                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 1.5                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Domain                                                                                                                                                                                                                                                                                                                                                                                                                                     | Constraint (ns) |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| GTHE4_CHANNEL_TXOUTCLK[0]                                                                                                                                                                                                                                                                                                                                                                                                                                 | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_TXOUTCLK[0]                                                        |             2.0 |
+| GTHE4_CHANNEL_TXOUTCLK[1]                                                                                                                                                                                                                                                                                                                                                                                                                                 | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_TXOUTCLK[1]                                                        |             2.0 |
+| GTHE4_CHANNEL_TXOUTCLK[2]                                                                                                                                                                                                                                                                                                                                                                                                                                 | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_TXOUTCLK[2]                                                        |             2.0 |
+| GTHE4_CHANNEL_TXOUTCLK[3]                                                                                                                                                                                                                                                                                                                                                                                                                                 | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/GTHE4_CHANNEL_TXOUTCLK[3]                                                        |             2.0 |
+| design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[0].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_tx_i/txoutclkmon |             8.0 |
+| design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[1].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_tx_i/txoutclkmon |             8.0 |
+| design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[2].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_tx_i/txoutclkmon |             8.0 |
+| design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[3].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_tx_i/bufg_gt_txoutclkmon_inst/O | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_cpll_cal_gthe4.gen_cpll_cal_inst[3].gen_inst_cpll_cal.gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_inst/gtwizard_ultrascale_v1_7_12_gthe4_cpll_cal_tx_i/txoutclkmon |             8.0 |
+| design_1_xdma_0_0_pcie4_ip_gt_top_i_n_30                                                                                                                                                                                                                                                                                                                                                                                                                  | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/PHY_CORECLK                                                                                                                                                                                                                                                                                                           |             4.0 |
+| pcie_refclk_clk_p                                                                                                                                                                                                                                                                                                                                                                                                                                         | pcie_refclk_clk_p                                                                                                                                                                                                                                                                                                                                                                                                                          |            10.0 |
+| pipe_clk                                                                                                                                                                                                                                                                                                                                                                                                                                                  | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/CLK_PCLK2_GT                                                                                                                                                                                                                                                                                                          |             4.0 |
+| qpll0outclk_out[0]                                                                                                                                                                                                                                                                                                                                                                                                                                        | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_common.gen_common_container[1].gen_enabled_common.gthe4_common_wrapper_inst/common_inst/qpll0outclk_out[0]                                                        |             0.2 |
+| qpll0outrefclk_out[0]                                                                                                                                                                                                                                                                                                                                                                                                                                     | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_common.gen_common_container[1].gen_enabled_common.gthe4_common_wrapper_inst/common_inst/qpll0outrefclk_out[0]                                                     |            10.0 |
+| qpll1outclk_out[0]                                                                                                                                                                                                                                                                                                                                                                                                                                        | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_common.gen_common_container[1].gen_enabled_common.gthe4_common_wrapper_inst/common_inst/qpll1outclk_out[0]                                                        |             0.2 |
+| qpll1outrefclk_out[0]                                                                                                                                                                                                                                                                                                                                                                                                                                     | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie4_ip_gt_i/inst/gen_gtwizard_gthe4_top.design_1_xdma_0_0_pcie4_ip_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_common.gen_common_container[1].gen_enabled_common.gthe4_common_wrapper_inst/common_inst/qpll1outrefclk_out[0]                                                     |            10.0 |
+| xdma_0_axi_aclk                                                                                                                                                                                                                                                                                                                                                                                                                                           | design_1_i/xdma_0/inst/pcie4_ip_i/inst/design_1_xdma_0_0_pcie4_ip_gt_top_i/diablo_gt.diablo_gt_phy_wrapper/phy_clk_i/PHY_USERCLK                                                                                                                                                                                                                                                                                                           |             8.0 |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------+-----------+
+| Name                  | Power (W) |
++-----------------------+-----------+
+| design_1_wrapper      |     4.406 |
+|   design_1_i          |     4.406 |
+|     axi_smc           |     0.164 |
+|       inst            |     0.164 |
+|     axi_smc_1         |     0.032 |
+|       inst            |     0.032 |
+|     util_ds_buf       |     0.006 |
+|       U0              |     0.006 |
+|     xdma_0            |     1.543 |
+|       inst            |     1.543 |
+|     zynq_ultra_ps_e_0 |     2.661 |
+|       inst            |     2.661 |
++-----------------------+-----------+
+
+

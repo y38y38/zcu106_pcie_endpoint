@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2.1 (64-bit)
+# SW Build 3414424 on Sun Dec 19 10:57:14 MST 2021
+# IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
+# Start of session at: Mon Jan 10 15:14:10 2022
+# Process ID: 7247
+# Current directory: /home/y/fpga/2021.2/project_12/project_12.runs/design_1_axi_smc_1_0_synth_1
+# Command line: vivado -log design_1_axi_smc_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_smc_1_0.tcl
+# Log file: /home/y/fpga/2021.2/project_12/project_12.runs/design_1_axi_smc_1_0_synth_1/design_1_axi_smc_1_0.vds
+# Journal file: /home/y/fpga/2021.2/project_12/project_12.runs/design_1_axi_smc_1_0_synth_1/vivado.jou
+# Running On: b, OS: Linux, CPU Frequency: 3000.000 MHz, CPU Physical cores: 4, Host memory: 16678 MB
+#-----------------------------------------------------------
+source design_1_axi_smc_1_0.tcl -notrace
